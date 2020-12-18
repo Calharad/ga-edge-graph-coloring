@@ -21,7 +21,6 @@ public class AlgorithmLauncher {
         Engine<IntegerGene, Integer> e = Engine.builder(problem)
                 .minimizing()
                 .populationSize(properties.population)
-                .maximalPhenotypeAge(10)
                 .alterers(
                         new Mutator<>(properties.mutationChance),
                         new MultiPointCrossover<>(properties.crossoverChance)
@@ -29,7 +28,7 @@ public class AlgorithmLauncher {
                 .build();
         Instant begin = Instant.now();
         Phenotype<IntegerGene, Integer> result = e.stream()
-                .limit(Limits.bySteadyFitness(55))
+                .limit(Limits.bySteadyFitness(graph.getEdgeCount() * 100))
                 .collect(EvolutionResult.toBestPhenotype());
         Instant end = Instant.now();
         long millis = Duration.between(begin, end).toMillis();

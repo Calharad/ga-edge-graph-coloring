@@ -1,0 +1,5 @@
+Graph[{
+1 \[UndirectedEdge] 2, 2 \[UndirectedEdge] 3, 1 \[UndirectedEdge] 3, 1 \[UndirectedEdge] 5,
+1 \[UndirectedEdge] 8, 3 \[UndirectedEdge] 5, 3 \[UndirectedEdge] 4, 4 \[UndirectedEdge] 7,
+4 \[UndirectedEdge] 8, 7 \[UndirectedEdge] 8, 5 \[UndirectedEdge] 6, 6 \[UndirectedEdge] 7,
+6 \[UndirectedEdge] 8}]

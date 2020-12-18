@@ -11,4 +11,10 @@ public class ApplicationTest {
         String caseName = "test";
         Application.launch(FileUtils.getGraphPath(caseName), FileUtils.getPropertiesPath(caseName));
     }
+
+    @Test
+    public void testApplication_case_1() {
+        String caseName = "case_1";
+        Application.launch(FileUtils.getGraphPath(caseName), FileUtils.getPropertiesPath(caseName));
+    }
 }
