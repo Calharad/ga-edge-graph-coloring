@@ -29,6 +29,7 @@ public class AlgorithmLauncher {
         Instant begin = Instant.now();
         Phenotype<IntegerGene, Integer> result = e.stream()
                 .limit(Limits.bySteadyFitness(graph.getEdgeCount() * 100))
+                .limit(Limits.byFixedGeneration(10000))
                 .collect(EvolutionResult.toBestPhenotype());
         Instant end = Instant.now();
         long millis = Duration.between(begin, end).toMillis();
